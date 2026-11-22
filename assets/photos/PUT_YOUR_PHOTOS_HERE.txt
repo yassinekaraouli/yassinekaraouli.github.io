@@ -1,0 +1,2 @@
+Put your photos here: hero.jpg, device.jpg, workshop.jpg, enthusiast.jpg.
+See README.md at the root of the website folder for sizes.

@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>AutoSimiX · Every sensor. Decoded.</title>
+  <meta name="description" content="AutoSimiX reads, records and emulates your car's sensors over Bluetooth. Six live inputs, a guided nine-step diagnosis and a growing reference of real values, in one Android app.">
+  <meta name="theme-color" content="#05060f">
+
+  <!-- Sharing previews (WhatsApp, Facebook, LinkedIn, X) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AutoSimiX · Every sensor. Decoded.">
+  <meta property="og:description" content="Automotive sensor diagnostics and emulation, in your pocket.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================================================== Header -->
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="AutoSimiX, back to top">
+      <img src="assets/img/logo-mark.png" alt="" width="28" height="28">
+      <span>AutoSimiX</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#read">Read</a>
+      <a href="#guide">Guide</a>
+      <a href="#reference">Reference</a>
+      <a href="#emulate">Emulate</a>
+      <a href="#app">App</a>
+      <a href="#specs">Specs</a>
+    </nav>
+    <a class="btn btn-small nav-cta play-link" href="#">Get the app</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="menu" id="menu" hidden>
+    <button class="menu-close" id="menuClose" aria-label="Close the menu">Close</button>
+    <a href="#read">Read</a>
+    <a href="#guide">Guide</a>
+    <a href="#reference">Reference</a>
+    <a href="#emulate">Emulate</a>
+    <a href="#app">App</a>
+    <a href="#specs">Specs</a>
+    <a class="btn play-link" href="#">Get it on Google Play</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ===================================================== Hero -->
+    <section class="hero dark" aria-labelledby="hero-title">
+      <!-- Your photo appears here once assets/photos/hero.jpg exists. -->
+      <div class="photo-slot hero-photo" data-photo="assets/photos/hero.jpg"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="grid-lines" aria-hidden="true"></div>
+
+      <div class="hero-text reveal">
+        <p class="eyebrow">Introducing</p>
+        <h1 id="hero-title">AutoSimiX</h1>
+        <p class="lead">Every sensor. Decoded.</p>
+      </div>
+
+      <div class="device-art reveal" aria-hidden="true">
+        <svg viewBox="0 0 640 300" class="device-svg">
+          <defs>
+            <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#1b2033"/>
+              <stop offset="1" stop-color="#0b0e19"/>
+            </linearGradient>
+            <linearGradient id="face" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#232a42"/>
+              <stop offset="1" stop-color="#141927"/>
+            </linearGradient>
+            <radialGradient id="led" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#9fb4ff"/>
+              <stop offset="1" stop-color="#2f5bff" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <ellipse cx="320" cy="282" rx="270" ry="14" fill="#000" opacity="0.55"/>
+          <rect x="40" y="40" width="560" height="230" rx="34" fill="url(#body)" stroke="#2c3550"/>
+          <rect x="58" y="56" width="524" height="198" rx="24" fill="url(#face)" stroke="#303a58"/>
+          <!-- logo + name -->
+          <g transform="translate(86 80)">
+            <image href="assets/img/logo-mark.png" x="0" y="0" width="38" height="38"/>
+            <text x="48" y="28" fill="#fff" font-size="22" font-weight="700" letter-spacing="0.5">AutoSimiX</text>
+          </g>
+          <!-- status LED -->
+          <circle cx="548" cy="102" r="18" fill="url(#led)" class="led-glow"/>
+          <circle cx="548" cy="102" r="5" fill="#cdd8ff"/>
+          <!-- six input sockets A1..A6 -->
+          <g class="sockets">
+            <g transform="translate(118 190)"><circle r="21" fill="#0a0d16" stroke="#FFD60A" stroke-width="5"/><circle r="7" fill="#05070c"/><text y="44" text-anchor="middle">A1</text></g>
+            <g transform="translate(198 190)"><circle r="21" fill="#0a0d16" stroke="#22D3EE" stroke-width="5"/><circle r="7" fill="#05070c"/><text y="44" text-anchor="middle">A2</text></g>
+            <g transform="translate(278 190)"><circle r="21" fill="#0a0d16" stroke="#4ADE80" stroke-width="5"/><circle r="7" fill="#05070c"/><text y="44" text-anchor="middle">A3</text></g>
+            <g transform="translate(358 190)"><circle r="21" fill="#0a0d16" stroke="#F472B6" stroke-width="5"/><circle r="7" fill="#05070c"/><text y="44" text-anchor="middle">A4</text></g>
+            <g transform="translate(438 190)"><circle r="21" fill="#0a0d16" stroke="#FB923C" stroke-width="5"/><circle r="7" fill="#05070c"/><text y="44" text-anchor="middle">A5</text></g>
+            <g transform="translate(518 190)"><circle r="21" fill="#0a0d16" stroke="#818CF8" stroke-width="5"/><circle r="7" fill="#05070c"/><text y="44" text-anchor="middle">A6</text></g>
+          </g>
+        </svg>
+      </div>
+
+      <div class="hero-actions reveal">
+        <a class="btn btn-primary play-link" href="#">Get it on Google Play</a>
+        <a class="btn btn-ghost" href="#read">Discover</a>
+      </div>
+      <a class="scroll-cue" href="#read" aria-label="Scroll down"></a>
+    </section>
+
+    <!-- ===================================================== Read -->
+    <section class="panel dark" id="read" aria-labelledby="read-title">
+      <div class="panel-head reveal">
+        <p class="eyebrow">Read</p>
+        <h2 id="read-title">See what your sensors see.</h2>
+        <p class="sub">Six inputs, live over Bluetooth. Plug in, and every signal appears on your phone: clear, smooth, in real time.</p>
+      </div>
+      <div class="scope reveal" role="img" aria-label="Animated oscilloscope: six live signals, A1 to A6">
+        <canvas id="scope"></canvas>
+        <div class="scope-legend" aria-hidden="true">
+          <span style="--c:#FFD60A">A1</span><span style="--c:#22D3EE">A2</span><span style="--c:#4ADE80">A3</span>
+          <span style="--c:#F472B6">A4</span><span style="--c:#FB923C">A5</span><span style="--c:#818CF8">A6</span>
+        </div>
+      </div>
+      <div class="stats reveal">
+        <div><strong data-count="6">6</strong><span>live inputs</span></div>
+        <div><strong data-count="100">100</strong><span>samples per second</span></div>
+        <div><strong data-count="33">33</strong><span>sensor types</span></div>
+      </div>
+    </section>
+
+    <!-- ===================================================== Guide -->
+    <section class="panel light" id="guide" aria-labelledby="guide-title">
+      <div class="panel-head reveal">
+        <p class="eyebrow">Guide</p>
+        <h2 id="guide-title">Nine steps. Zero guesswork.</h2>
+        <p class="sub">AutoSimiX walks you through every measurement, from key on to 3000 RPM, then records two minutes of signal. Each step shows exactly where every probe goes.</p>
+      </div>
+
+      <ol class="steps reveal" id="steps" aria-label="The nine steps">
+        <li><b>1</b><span>Key ON<br><small>pull-up / pull-down test</small></span></li>
+        <li><b>2</b><span>Engine OFF<br><small>Key OFF</small></span></li>
+        <li><b>3</b><span>Engine OFF<br><small>Key ON</small></span></li>
+        <li><b>4</b><span>Idle</span></li>
+        <li><b>5</b><span>1500<br><small>RPM</small></span></li>
+        <li><b>6</b><span>2000<br><small>RPM</small></span></li>
+        <li><b>7</b><span>2500<br><small>RPM</small></span></li>
+        <li><b>8</b><span>3000<br><small>RPM</small></span></li>
+        <li><b>9</b><span>2-minute<br><small>recording</small></span></li>
+      </ol>
+
+      <div class="cards reveal">
+        <article class="card">
+          <h3>Pull-up &amp; pull-down</h3>
+          <p>Step 1 tests every input and tells you which wire is held up, held down, or neither.</p>
+        </article>
+        <article class="card">
+          <h3>Ground check</h3>
+          <p>Ground wires are found automatically and verified before the engine runs.</p>
+        </article>
+        <article class="card">
+          <h3>Supply finder</h3>
+          <p>The 5&nbsp;V or 12&nbsp;V supply is detected and moved to A1, where the current is measured.</p>
+        </article>
+        <article class="card">
+          <h3>Current, every step</h3>
+          <p>Read what the sensor draws at each step, and during the recording.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================================================== Reference -->
+    <section class="panel blue" id="reference" aria-labelledby="reference-title">
+      <div class="panel-head reveal">
+        <p class="eyebrow">Reference</p>
+        <h2 id="reference-title">Know what normal looks like.</h2>
+        <p class="sub">Every shared session builds a reference of real values, car by car and sensor by sensor. Your readings are compared with it, and anything unusual stands out.</p>
+      </div>
+      <div class="ranges reveal" aria-label="Example: readings compared with their normal ranges">
+        <div class="range"><span class="label">A1 · supply</span><div class="bar"><i style="--lo:62%;--hi:78%"></i><em style="--v:70%"></em></div><span class="val ok">12.06 V</span></div>
+        <div class="range"><span class="label">A2 · signal</span><div class="bar"><i style="--lo:18%;--hi:34%"></i><em style="--v:27%"></em></div><span class="val ok">1.46 V</span></div>
+        <div class="range"><span class="label">A4 · signal</span><div class="bar"><i style="--lo:20%;--hi:38%"></i><em class="warn" style="--v:58%"></em></div><span class="val warn">2.91 V</span></div>
+        <div class="range"><span class="label">A5 · ground</span><div class="bar"><i style="--lo:0%;--hi:6%"></i><em style="--v:2%"></em></div><span class="val ok">0.02 V</span></div>
+      </div>
+      <p class="note reveal">The more people share, the sharper the reference becomes.</p>
+    </section>
+
+    <!-- ===================================================== Emulate -->
+    <section class="panel dark" id="emulate" aria-labelledby="emulate-title">
+      <div class="panel-head reveal">
+        <p class="eyebrow">Emulate</p>
+        <h2 id="emulate-title">Don't just read. Emulate.</h2>
+        <p class="sub">Two outputs turn AutoSimiX into a signal source. Test an ECU, or a wiring harness, without the real sensor.</p>
+      </div>
+      <div class="wave reveal" aria-hidden="true"><canvas id="wave"></canvas></div>
+      <div class="chips reveal">
+        <span>Wave Generator</span>
+        <span>CKP Emulation</span>
+        <span>Custom Emulation</span>
+        <span>Math Emulation</span>
+      </div>
+    </section>
+
+    <!-- ===================================================== App -->
+    <section class="panel light" id="app" aria-labelledby="app-title">
+      <div class="panel-head reveal">
+        <p class="eyebrow">The app</p>
+        <h2 id="app-title">Designed for the workshop.</h2>
+        <p class="sub">Clear screens, big buttons, one step at a time. Everything you measure is saved, backed up and ready for your PC.</p>
+      </div>
+      <div class="phones reveal" tabindex="0" aria-label="App screens, scroll sideways">
+        <figure><div class="phone"><img src="assets/screens/sensor-selection.webp" alt="Sensor selection: MAF, MAP, IAT and 30 more sensor types" loading="lazy" width="540" height="1199"></div><figcaption>Pick the sensor</figcaption></figure>
+        <figure><div class="phone"><img src="assets/screens/step-1-probes.webp" alt="Step 1 of 9: the picture shows where to plug each probe" loading="lazy" width="540" height="1199"></div><figcaption>Follow the probes</figcaption></figure>
+        <figure><div class="phone"><img src="assets/screens/supply-check.webp" alt="The supply is moved to A1 and verified live" loading="lazy" width="540" height="1199"></div><figcaption>Smart checks</figcaption></figure>
+        <figure><div class="phone"><img src="assets/screens/received-values.webp" alt="The values and current of every step" loading="lazy" width="540" height="1199"></div><figcaption>Every value, every step</figcaption></figure>
+        <figure><div class="phone"><img src="assets/screens/recording-plot.webp" alt="The two-minute recording plotted on the phone" loading="lazy" width="540" height="1199"></div><figcaption>Replay the recording</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ===================================================== Audience -->
+    <section class="panel light alt" aria-labelledby="who-title">
+      <div class="panel-head reveal">
+        <p class="eyebrow">Made for</p>
+        <h2 id="who-title">The workshop. And the curious.</h2>
+      </div>
+      <div class="duo reveal">
+        <article class="tile tile-pro">
+          <!-- Your photo appears here once assets/photos/workshop.jpg exists. -->
+          <div class="photo-slot" data-photo="assets/photos/workshop.jpg"></div>
+          <div class="tile-text">
+            <h3>For professionals</h3>
+            <p>Spot a faulty sensor fast, compare it with real reference values, and keep a record of every car you test.</p>
+          </div>
+        </article>
+        <article class="tile tile-fan">
+          <!-- Your photo appears here once assets/photos/enthusiast.jpg exists. -->
+          <div class="photo-slot" data-photo="assets/photos/enthusiast.jpg"></div>
+          <div class="tile-text">
+            <h3>For enthusiasts</h3>
+            <p>See what is really happening under your hood. The same tools, made simple.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================================================== Specs -->
+    <section class="panel dark" id="specs" aria-labelledby="specs-title">
+      <div class="panel-head reveal">
+        <p class="eyebrow">Specs</p>
+        <h2 id="specs-title">Small box. Serious numbers.</h2>
+      </div>
+      <!-- Your photo appears here once assets/photos/device.jpg exists. -->
+      <div class="photo-slot specs-photo reveal" data-photo="assets/photos/device.jpg"></div>
+      <dl class="specs reveal">
+        <div><dt>Inputs</dt><dd>6 analog inputs, A1 to A6</dd></div>
+        <div><dt>Pull detection</dt><dd>Pull-up / pull-down test on every input</dd></div>
+        <div><dt>Current</dt><dd>Measured through A1, in mA</dd></div>
+        <div><dt>Recording</dt><dd>Up to 2 minutes, 100 samples per second</dd></div>
+        <div><dt>Outputs</dt><dd>2 signal outputs for emulation</dd></div>
+        <div><dt>Connection</dt><dd>Bluetooth Low Energy</dd></div>
+        <div><dt>Sensors</dt><dd>33 types: MAF, MAP, CKP, CMP, TPS, O2 and more</dd></div>
+        <div><dt>Vehicles</dt><dd>Launching with Citroën</dd></div>
+        <div><dt>Your data</dt><dd>Full backup to your PC, CSV for Excel</dd></div>
+        <div><dt>App</dt><dd>Android</dd></div>
+      </dl>
+    </section>
+
+    <!-- ===================================================== Final call -->
+    <section class="cta blue" aria-labelledby="cta-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="cta-inner reveal">
+        <img src="assets/img/logo-mark.png" alt="" width="72" height="72">
+        <h2 id="cta-title">Sensor diagnostics,<br>reinvented.</h2>
+        <p class="sub">Download the app and get ready to plug in.</p>
+        <a class="btn btn-primary btn-large play-link" href="#">Get it on Google Play</a>
+        <p class="fine">Works with the AutoSimiX device · Android</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================== Footer -->
+  <footer class="footer">
+    <span>© <span id="year">2026</span> AutoSimiX</span>
+    <a href="https://yassinekaraouli.github.io/autosimix-privacy/">Privacy policy</a>
+    <a href="mailto:yassinekaraouli@gmail.com">Contact</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
